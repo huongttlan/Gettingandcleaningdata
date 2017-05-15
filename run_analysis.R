@@ -40,5 +40,5 @@ write.table(Combine_dataset, "Combine_dataset.txt")
 #Now let's create a tidy dataset
 Combine_dataset_groupby<-group_by(Combine_dataset,Subject, Activity)
 finaltidy_dataset<- summarise_each(Combine_dataset_groupby,funs(mean))
-write.table(finaltidy_dataset, "finaltidy_dataset.txt")
+write.table(finaltidy_dataset, "finaltidy_dataset.txt",row.name=FALSE)
 #write.table(names(finaltidy_dataset),"codebook.txt")
